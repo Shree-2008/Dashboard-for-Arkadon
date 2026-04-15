@@ -12,7 +12,7 @@ body {
   font-family: 'JetBrains Mono', monospace;
   line-height: 1.5;
   color: #f2f4f8;
-  background-image: url('images/darkthemebackground.png');
+  background-image: url("darkthemebackground.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -128,19 +128,19 @@ section {
 }
 
 .nav-card.iitm { background: rgba(36, 75, 154, 0.15); }
-.nav-card.iitm::before { background-image: url('images/IIT_Madras_Logo.png'); }
+.nav-card.iitm::before { background-image: url('IIT_Madras_Logo.png'); }
 
 .nav-card.devs { background: rgba(17, 17, 17, 0.15); }
-.nav-card.devs::before { background-image: url('images/100xDevslogo.png'); }
+.nav-card.devs::before { background-image: url('100xDevslogo.png'); }
 
 .nav-card.family { background: rgba(77, 137, 199, 0.15); }
-.nav-card.family::before { background-image: url('images/familyarkadon.png'); }
+.nav-card.family::before { background-image: url('familyarkadon.png'); }
 
 .nav-card.riddhi { background: rgba(214, 59, 116, 0.15); }
-.nav-card.riddhi::before { background-image: url('images/pixel.jpg.png'); }
+.nav-card.riddhi::before { background-image: url('pixel.jpg.png'); }
 
 .nav-card.gym { background: rgba(51, 51, 51, 0.15); }
-.nav-card.gym::before { background-image: url('images/gymarkadon.png'); }
+.nav-card.gym::before { background-image: url('gymarkadon.png'); }
 
 .year-progress-component {
   max-width: 680px;
@@ -283,7 +283,7 @@ input[type='number'] {
 /* ===== Theme Accents (without replacing background image) ===== */
 .theme-iitm { 
   color: #dbe7ff;
-  background-image: url('images/iitmbackground.png');
+  background-image: url('iitmbackground.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -309,7 +309,7 @@ input[type='number'] {
 
 .theme-family { 
   color: #e8f3ff;
-  background-image: url('images/familybackground.png');
+  background-image: url('familybackground.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -319,7 +319,7 @@ input[type='number'] {
 
 .theme-riddhi { 
   color: #ffe4f0;
-  background-image: url('images/Riddhibackground.png');
+  background-image: url('Riddhibackground.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -329,7 +329,7 @@ input[type='number'] {
 
 .theme-gym { 
   color: #f2f2f2;
-  background-image: url('images/gymbackground.png');
+  background-image: url('gymbackground.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

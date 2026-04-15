@@ -1,0 +1,459 @@
+/* ===== Typography (Global Font) ===== */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+/* ===== Full-page Background + Overlay ===== */
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'JetBrains Mono', monospace;
+  line-height: 1.5;
+  color: #f2f4f8;
+  background-image: url('images/darkthemebackground.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Slight dark layer for readability */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.container {
+  width: min(95%, 900px);
+  margin: 0 auto;
+  padding: 24px;
+  position: relative;
+  z-index: 1;
+}
+
+h1,
+h2,
+p,
+section {
+  text-align: center;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 12px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* ===== Home Page Layout ===== */
+.home-page {
+  min-height: 100vh;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.date-text {
+  font-size: 1.1rem;
+}
+
+.motivation-card {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  backdrop-filter: blur(2px);
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin: 16px auto 28px;
+  max-width: 620px;
+}
+
+/* ===== Category Cards ===== */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(120px, 1fr));
+  gap: 16px;
+  justify-content: center;
+  align-items: stretch;
+  margin: 0 auto;
+}
+
+.nav-card {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 110px;
+  padding: 18px 12px;
+  border-radius: 15px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: 700;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  isolation: isolate;
+}
+
+/* transparent image overlay inside each card */
+.nav-card::before {
+  content: '';
+  position: absolute;
+  inset: 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.nav-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.4);
+}
+
+.nav-card.iitm { background: rgba(36, 75, 154, 0.15); }
+.nav-card.iitm::before { background-image: url('images/IIT_Madras_Logo.png'); }
+
+.nav-card.devs { background: rgba(17, 17, 17, 0.15); }
+.nav-card.devs::before { background-image: url('images/100xDevslogo.png'); }
+
+.nav-card.family { background: rgba(77, 137, 199, 0.15); }
+.nav-card.family::before { background-image: url('images/familyarkadon.png'); }
+
+.nav-card.riddhi { background: rgba(214, 59, 116, 0.15); }
+.nav-card.riddhi::before { background-image: url('images/pixel.jpg.png'); }
+
+.nav-card.gym { background: rgba(51, 51, 51, 0.15); }
+.nav-card.gym::before { background-image: url('images/gymarkadon.png'); }
+
+.year-progress-component {
+  max-width: 680px;
+  margin: 18px auto 0;
+  padding: 14px 16px;
+  background: rgba(8, 12, 20, 0.52);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 28px;
+  backdrop-filter: blur(16px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
+}
+
+.year-progress-value {
+  margin: 0 0 10px;
+  text-align: center;
+  color: #eef6ff;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.year-progress-track {
+  width: 100%;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+.year-progress-fill {
+  width: 0%;
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(126, 211, 255, 0.95), rgba(105, 141, 255, 0.95));
+  box-shadow: 0 0 18px rgba(105, 141, 255, 0.25);
+  transition: width 0.55s ease;
+}
+
+.year-progress-caption {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 0.86rem;
+  color: rgba(234, 244, 255, 0.78);
+  letter-spacing: 0.02em;
+}
+
+/* ===== Section Page Structure ===== */
+.section-page {
+  min-height: 100vh;
+}
+
+.section-page .container {
+  max-width: 820px;
+}
+
+.panel {
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #1f2633;
+  border-radius: 12px;
+  padding: 14px;
+  margin-bottom: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+label {
+  display: block;
+  margin: 8px 0;
+}
+
+textarea,
+input[type='number'] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #bbb;
+  font-size: 1rem;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.progress-track {
+  width: 100%;
+  height: 18px;
+  border-radius: 12px;
+  background: #ddd;
+  overflow: hidden;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, #25a55f, #1f7e4a);
+  transition: width 0.4s ease;
+  box-shadow: 0 0 8px rgba(37, 165, 95, 0.4);
+}
+
+/* ===== Modal + Heart Animation ===== */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 10;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: #fff;
+  color: #1f2633;
+  max-width: 460px;
+  width: 100%;
+  padding: 24px;
+  border-radius: 14px;
+  text-align: center;
+}
+
+.hearts span {
+  display: inline-block;
+  font-size: 1.6rem;
+  animation: floatUp 1s infinite ease-in-out;
+}
+
+.hearts span:nth-child(2) { animation-delay: 0.2s; }
+.hearts span:nth-child(3) { animation-delay: 0.4s; }
+.hearts span:nth-child(4) { animation-delay: 0.6s; }
+
+@keyframes floatUp {
+  0%,
+  100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* ===== Theme Accents (without replacing background image) ===== */
+.theme-iitm { 
+  color: #dbe7ff;
+  background-image: url('images/iitmbackground.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.theme-iitm .back-link { color: #c6d8ff; }
+.theme-iitm .progress-bar { background: linear-gradient(90deg, #2f62c9, #1e3a7a); box-shadow: 0 0 8px rgba(47, 98, 201, 0.5); }
+
+.theme-devs { color: #c9d1d9; }
+.theme-devs .panel {
+  background: rgba(22, 27, 34, 0.9);
+  border-color: #30363d;
+  color: #c9d1d9;
+}
+.theme-devs .back-link { color: #58a6ff; }
+.theme-devs textarea,
+.theme-devs input[type='number'] {
+  background: #0d1117;
+  color: #c9d1d9;
+  border-color: #30363d;
+}
+.theme-devs .progress-track { background: #30363d; }
+.theme-devs .progress-bar { background: linear-gradient(90deg, #2ea043, #1a5c2d); box-shadow: 0 0 8px rgba(46, 160, 67, 0.5); }
+
+.theme-family { 
+  color: #e8f3ff;
+  background-image: url('images/familybackground.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.theme-family .back-link { color: #b9ddff; }
+.theme-family .progress-bar { background: linear-gradient(90deg, #57a7e5, #2e5c8c); box-shadow: 0 0 8px rgba(87, 167, 229, 0.5); }
+
+.theme-riddhi { 
+  color: #ffe4f0;
+  background-image: url('images/Riddhibackground.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.theme-riddhi .back-link { color: #ffc1da; }
+.theme-riddhi .progress-bar { background: linear-gradient(90deg, #f02e77, #c91f58); box-shadow: 0 0 8px rgba(240, 46, 119, 0.5); }
+
+.theme-gym { 
+  color: #f2f2f2;
+  background-image: url('images/gymbackground.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.theme-gym .panel {
+  background: rgba(26, 26, 26, 0.9);
+  border-color: #555;
+  color: #f2f2f2;
+}
+.theme-gym .back-link { color: #f8f8f8; }
+.theme-gym textarea,
+.theme-gym input[type='number'] {
+  background: #111;
+  color: #fff;
+  border-color: #666;
+}
+.theme-gym .progress-track { background: #444; }
+.theme-gym .progress-bar { background: linear-gradient(90deg, #ffffff, #e0e0e0); box-shadow: 0 0 8px rgba(255, 255, 255, 0.4); }
+
+/* ===== Dynamic Checklist ===== */
+.checklist-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.checklist-container label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.checklist-container input[type='checkbox'] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: currentColor;
+}
+
+.add-checklist-item {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.new-checklist-input {
+  flex: 1;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #bbb;
+  font-size: 0.9rem;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.add-btn {
+  padding: 8px 16px;
+  background: #4a9eff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.add-btn:hover {
+  background: #3a8ee5;
+}
+
+.remove-btn {
+  background: #ff6b6b;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 8px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: background 0.3s ease;
+}
+
+.remove-btn:hover {
+  background: #e63946;
+}
+
+.checkbox-item-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: space-between;
+}
+
+.checkbox-item-wrapper label {
+  flex: 1;
+  margin: 0;
+}
+
+/* ===== Responsive Layout ===== */
+@media (max-width: 900px) {
+  .card-grid {
+    grid-template-columns: repeat(2, minmax(140px, 200px));
+    justify-content: center;
+  }
+}
+
+@media (max-width: 520px) {
+  body {
+    align-items: flex-start;
+    padding: 18px 0;
+  }
+
+  .container {
+    width: min(95%, 420px);
+    padding: 18px;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-card {
+    min-height: 96px;
+  }
+}

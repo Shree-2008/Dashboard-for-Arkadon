@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daily Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="home-page" data-page="home">
+  <main class="container home-container">
+    <h1 id="greeting">Hello!</h1>
+    <p id="dateText" class="date-text"></p>
+    <p id="motivation" class="motivation-card"></p>
+
+    <section>
+      <h2>Your Focus Areas</h2>
+      <div class="card-grid">
+        <a class="nav-card iitm" href="iitm.html">IITM</a>
+        <a class="nav-card devs" href="devs.html">100xDevs</a>
+        <a class="nav-card family" href="family.html">Family</a>
+        <a class="nav-card riddhi" href="riddhi.html">Riddhi</a>
+        <a class="nav-card gym" href="gym.html">Gym</a>
+      </div>
+    </section>
+
+    <section class="year-progress-component">
+      <div id="yearProgressValue" class="year-progress-value">0%</div>
+      <div class="year-progress-track">
+        <div id="yearProgressFill" class="year-progress-fill"></div>
+      </div>
+      <div id="yearProgressCaption" class="year-progress-caption">0% of 2026 passed</div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

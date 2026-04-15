@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IITM Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="section-page theme-iitm" data-page="iitm">
+  <main class="container">
+    <a class="back-link" href="index.html">← Back to Home</a>
+    <h1>IITM Tracker</h1>
+
+    <section class="panel">
+      <h2>Checklist</h2>
+      <div id="checklistContainer" class="checklist-container">
+        <label><input type="checkbox" class="task-checkbox" /> Watch lecture</label>
+        <label><input type="checkbox" class="task-checkbox" /> Solve assignment</label>
+        <label><input type="checkbox" class="task-checkbox" /> Revise notes</label>
+        <label><input type="checkbox" class="task-checkbox" /> Practice quiz</label>
+      </div>
+      <div class="add-checklist-item">
+        <input type="text" id="newChecklistItem" class="new-checklist-input" placeholder="Type a new task..." />
+        <button id="addChecklistBtn" class="add-btn">Add</button>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Goals</h2>
+      <textarea id="goalsText" rows="3">Complete all learning tasks with focus and discipline.</textarea>
+    </section>
+
+    <section class="panel">
+      <h2>Time Spent (hours)</h2>
+      <input id="timeSpent" type="number" min="0" step="0.5" placeholder="e.g. 2" />
+    </section>
+
+    <section class="panel">
+      <h2>Progress</h2>
+      <div class="progress-track"><div id="progressBar" class="progress-bar"></div></div>
+      <p id="progressText">0% completed</p>
+    </section>
+
+    <section class="panel">
+      <h2>Remarks</h2>
+      <textarea id="remarks" rows="4" placeholder="Write your thoughts for today..."></textarea>
+    </section>
+  </main>
+
+  <div id="completeModal" class="modal hidden">
+    <div class="modal-content">
+      <h2>I'M SO PROUD OF YOU MY LOVE ❤️ KEEP IT UP 😘</h2>
+      <div class="hearts" aria-hidden="true">
+        <span>❤️</span><span>💖</span><span>💕</span><span>💘</span>
+      </div>
+      <button id="closeModal">Close</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
